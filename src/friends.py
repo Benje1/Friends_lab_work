@@ -16,3 +16,11 @@ def likes_to_eat(person, food_item):
         if snack == food_item:
             food_item_there = True   
     return food_item_there
+
+# find way to add to list within dictionanry
+# get the length of the friends list
+def add_friend(person, friend):
+    person["friends"].append(friend)
+    return len(person["friends"])
+
+
