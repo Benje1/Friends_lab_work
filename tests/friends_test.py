@@ -83,7 +83,7 @@ class TestFriends(unittest.TestCase):
   def test_person_likes_food__True(self):
     self.assertEqual(True, likes_to_eat(self.person2, "bread"))
 
-  @unittest.skip("delete this line to run the test")
+  # @unittest.skip("delete this line to run the test")
   def test_person_likes_food__False(self):
     self.assertEqual(False, likes_to_eat(self.person3, "spinach"))
 
