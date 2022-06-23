@@ -23,4 +23,7 @@ def add_friend(person, friend):
     person["friends"].append(friend)
     return len(person["friends"])
 
+def remove_friend(person, friend):
+    person["friends"].remove(friend)
+    return len(person["friends"])
 
