@@ -1,5 +1,6 @@
 
 
+from unittest import result
 from xml.etree.ElementPath import prepare_descendant
 
 
@@ -33,3 +34,27 @@ def total_money(scoby_gang):
         total_money += person["monies"]
     return total_money
 
+def lend_money(lender, lendee, cash):
+    lender["monies"] -= cash
+    lendee["monies"] += cash
+
+def all_favourite_foods(scoby_gang):
+    result = list()
+    for person in scoby_gang:
+        for snack in person["favourites"]["snacks"]:
+            result.append(snack)
+    return result
+
+def find_no_friends(scoby_gang):
+    no_mates = []
+    for person in scoby_gang:
+        if len(person["friends"]) == 0:
+            no_mates.append(person)
+    return no_mates
+
+def unique_favourite_tv_shows(scoby_gang):
+    result = []
+    for person in scoby_gang:
+        if person["favourites"]["tv_show"] not in result:
+            result.append(person["favourites"]["tv_show"])
+    return result
