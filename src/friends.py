@@ -27,3 +27,9 @@ def remove_friend(person, friend):
     person["friends"].remove(friend)
     return len(person["friends"])
 
+def total_money(scoby_gang):
+    total_money = 0
+    for person in scoby_gang:
+        total_money += person["monies"]
+    return total_money
+
